@@ -1,0 +1,31 @@
+<!-- display film detail -->
+<div class="text-center" *ngIf="film.length ==0"><h3>There is no film yet</h3></div>
+
+    <div *ngIf="film.length">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Collection</th>
+                <th scope="col">rating</th>
+                <th scope="col">Director</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let f of film">
+                <td>{{f.id}}</td>
+                <td>{{f.name}}</td>
+                <td>{{f.boxOfficeCollection}}</td>
+                <td>{{f.rating}}</td>
+                <td>{{f.directors}}</td>
+                <td><button class="btn btn-danger btn-sm" (click)="delete(f._id)">del</button>
+                <a routerLink="/updatefilm/{{f._id}}"><button class="btn btn-primary btn-sm">edit</button></a></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        
+    </div>
+
+

@@ -1,0 +1,15 @@
+.appname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:bisque;
+     background-color: cornflowerblue; 
+     font-size: 22px; 
+     height:2cm
+}
+.navigation{
+    color: white;
+    background-color: rgb(24, 158, 147);
+    height: 100vh;
+    width:100%;
+}
