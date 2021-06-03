@@ -4,6 +4,7 @@ export class Film {
         public name:any,
         public collection:any,
         public rating:any,
-        public director:any
+        public director:any,
+        public directrordrop:any
     ){}
 }

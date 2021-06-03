@@ -5,7 +5,7 @@
 
         
 <form #form="ngForm">
-  {{form.value|json}}
+  <!-- {{form.value|json}} -->
     <div class="form-group">
         <label for="exampleInputEmail1">Movie Id</label>
 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="FilmObj.id" name="id">
@@ -32,6 +32,14 @@
         <label for="exampleInputPassword1">Director(s)Name</label>
         <input type="text" class="form-control" id="exampleInputPassword1" name="director" [(ngModel)]="FilmObj.director" name="director">
       </div>
+
+    <div class="form-group">
+      <select class="form-select" aria-label="Disabled select example" name="directorname" [(ngModel)]="FilmObj.director">
+        <option   *ngFor="let direct of directorArr" value="{{direct.name}}">{{direct.name}}</option>
+        <!-- <option value="2">Two</option>
+        <option value="3">Three</option> -->
+      </select>
+    </div>
 
     <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
   </form>

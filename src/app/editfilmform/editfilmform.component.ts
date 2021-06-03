@@ -9,14 +9,20 @@ import { FilmserviceService } from '../filmservice.service';
 })
 export class EditfilmformComponent implements OnInit {
 
+  directorArr:any;
   name:any
-  FilmObj = new Film(10,'','','','');
+  FilmObj = new Film(10,'','','','','');
   constructor(private service:FilmserviceService,private router:Router) {
     
    }
 
   ngOnInit(): void {
 
+    this.service.getDirector().subscribe(data=>{
+      this.directorArr = data;
+      console.log(data)
+      console.log(this.directorArr)
+    })
   }
 
   save(){

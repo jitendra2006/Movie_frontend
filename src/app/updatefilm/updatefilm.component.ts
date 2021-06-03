@@ -11,7 +11,7 @@ import { FilmserviceService } from '../filmservice.service';
 export class UpdatefilmComponent implements OnInit {
 
   id:any
-  FilmObj = new Film('','','','','')
+  FilmObj = new Film('','','','','','')
   constructor(private service:FilmserviceService,private router:ActivatedRoute,private route:Router) { }
 
   ngOnInit(): void {
